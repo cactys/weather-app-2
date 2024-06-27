@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <a href="#" class="logo"><img src="public/logo.png" alt="logo" /></a>
+        <div class="input-wrapper">
+          <input class="input" type="text" placeholder="Поиск по городу" />
+          <button class="input__search-btn" type="button"></button>
+        </div>
+      </header>
+      <main>
+        <div class="weather">
+          <div class="weather__info">
+            <div class="weather__info-location">
+              <h3 class="weather__info-city">Москва</h3>
+              <time class="weather__info-date" datetime="2024-01-06"
+                >Суббота, 06 января
+                <div>11:29</div></time
+              >
+            </div>
+            <div class="weather__info-temp">-7°</div>
+            <div class="weather__info-detail">
+              <div class="info-sky-wrapper">
+                <img src="public/sky-clouds.png" alt="sky-status" width="24px" height="24px">
+                <p>Облачно</p>
+              </div>
+              <p>Ощущается как -11°</p>
+            </div>
+          </div>
+          <div class="weather-cards">
+            <div class="weather-cards__item"></div>
+            <div class="weather-cards__item"></div>
+            <div class="weather-cards__item"></div>
+            <div class="weather-cards__item"></div>
+            <div class="weather-cards__item"></div>
+            <div class="weather-cards__item"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
