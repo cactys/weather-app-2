@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.input-wrapper {
+  position: relative;
+  max-width: 506px;
+  width: 100%;
+  max-height: 48px;
+  height: 100%;
+}
+
+.input {
+  background-color: var(--color-main-opacity);
+  color: var(--color-gray);
+  padding: 12px 50px 12px 16px;
+  width: 100%;
+  border-radius: var(--border-radius);
+  transition: 0.3s ease-in-out;
+}
+
+.input:hover, input:active, input:focus {
+  background-color: var(--color-hover);
+  color: var(--color-black);
+}
+
+.input-button {
+  position: absolute;
+  content: '';
+  padding: 0;
+  top: 12px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: none;
+  color: var(--color-icon);
+  transition: all 0.3s ease-in-out;
+}
+
+.input-button:hover {
+  cursor: pointer;
+}
+
+.close:hover, .close:focus{
+  color: var(--color-black);
+}

@@ -3,54 +3,106 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>Weather App</title>
   </head>
   <body>
     <div class="container">
       <header class="header">
-        <a href="#" class="logo"><img src="public/logo.png" alt="logo" /></a>
+        <a href="#" class="logo"
+          ><img src="./public/images/logo.svg" alt="logo"
+        /></a>
         <div class="input-wrapper">
           <input class="input" type="text" placeholder="Поиск по городу" />
-          <button class="input__search-btn" type="button"></button>
+          <button class="input-button" type="button">
+            <svg fill="none" viewBox="0 0 24 24" width="24" height="24">
+              <use href="#search"></use>
+            </svg>
+          </button>
+          <button
+            style="display: none"
+            class="input-button close"
+            type="button"
+          >
+            <svg fill="none" viewBox="0 0 24 24" width="24" height="24">
+              <use href="#close"></use>
+            </svg>
+          </button>
         </div>
       </header>
       <main>
         <div class="weather">
-          <div class="weather__info">
-            <div class="weather__info-location">
-              <h3 class="weather__info-city">Москва</h3>
-              <time class="weather__info-date" datetime="2024-01-06"
-                >Суббота, 06 января
-                <div>11:29</div></time
-              >
+          <section class="weather-info">
+            <h1 class="visually-hidden">Погода сегодня</h1>
+            <div class="weather__location">
+              <h2 class="weather__city">Москва</h2>
+              <p class="weather__date">Суббота, 06 января</p>
+              <time datetime="11:29">11:29</time>
             </div>
-            <div class="weather__info-temp">-7°</div>
-            <div class="weather__info-detail">
-              <div class="info-sky-wrapper">
-                <img src="public/sky-clouds.png" alt="sky-status" width="24px" height="24px">
-                <p>Облачно</p>
-              </div>
+            <div class="weather__temp">-7°</div>
+            <div class="weather__detail">
+              <figure class="info-sky-wrapper">
+                <img
+                  src="./public/images/time=day,state=broken-clouds.svg"
+                  alt="sky-status"
+                  width="24"
+                  height="24"
+                />
+                <figcaption>Облачно</figcaption>
+              </figure>
               <p>Ощущается как -11°</p>
             </div>
-          </div>
-          <div class="weather-cards">
-            <div class="weather-cards__item"></div>
-            <div class="weather-cards__item"></div>
-            <div class="weather-cards__item"></div>
-            <div class="weather-cards__item"></div>
-            <div class="weather-cards__item"></div>
-            <div class="weather-cards__item"></div>
-          </div>
+          </section>
+          <section class="weather-cards">
+            <h2 class="visually-hidden">Карточки с погодой</h2>
+            <article class="weather-cards__item"></article>
+            <article class="weather-cards__item"></article>
+            <article class="weather-cards__item"></article>
+            <article class="weather-cards__item"></article>
+            <article class="weather-cards__item"></article>
+            <article class="weather-cards__item"></article>
+          </section>
         </div>
       </main>
     </div>
+    <script src="src/main.js"></script>
+    <svg
+      class="visually-hidden"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="search">
+        <path
+          d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+          stroke="#545454"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M20.9999 20.9999L16.6499 16.6499"
+          stroke="#545454"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="close">
+        <path
+          d="M4.65041 5.95141C4.2912 5.59221 4.29119 5.00983 4.65039 4.65062C5.00958 4.29141 5.59197 4.2914 5.95118 4.65059L19.3496 18.0485C19.7088 18.4077 19.7088 18.9901 19.3496 19.3493C18.9904 19.7085 18.408 19.7086 18.0488 19.3494L4.65041 5.95141Z"
+          fill="#545454"
+          stroke="#545454"
+          stroke-width="0.5"
+        />
+        <path
+          d="M4.65084 19.3496C4.29163 18.9904 4.29161 18.408 4.65081 18.0488L18.0488 4.6504C18.408 4.29119 18.9903 4.29118 19.3496 4.65038C19.7088 5.00957 19.7088 5.59196 19.3496 5.95117L5.95163 19.3496C5.59243 19.7088 5.01005 19.7088 4.65084 19.3496Z"
+          fill="#545454"
+          stroke="#545454"
+          stroke-width="0.5"
+        />
+      </symbol>
+    </svg>
   </body>
 </html>
