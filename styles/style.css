@@ -1,15 +1,16 @@
 @import url('./fonts.css');
 @import url('./normalize.css');
 @import url('./header.css');
-@import url('./main.css');
+@import url('./weather-info.css');
+@import url('./weather-cards.css');
 
 :root{
   --color-main:#f5f4f4;
-  --color-main-opacity: rgba(245, 244, 244, 0.4);
   --color-gray: #707070;
   --color-black: #202020;
   --color-hover: #dadada;
   --color-icon: #545454;
+  --color-main-opacity: hsl(from var(--color-main) h s l / 40%);
   --flex-gap: 64px;
   --padding: 32px;
   --border-radius: 8px;
@@ -48,11 +49,11 @@ body {
   width: 1120px;
   margin: 0 auto;
   padding: var(--padding);
-  background-color: rgba(112, 112, 112, 0.1);
+  background-color: hsl(from var(--color-gray) h s l / 10%);
   backdrop-filter: blur(50px);
   border-radius: var(--border-radius);
 }
-
+ 
 .weather {
   display: flex;
   flex-direction: row;

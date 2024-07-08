@@ -1,0 +1,128 @@
+.weather-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--flex-gap) / 4);
+  align-items: center;
+  justify-content: center;
+
+  max-width: 506px;
+  width: 100%;
+
+  color: var(--color-black);
+}
+
+.card {
+  width: 158px;
+  height: 196px;
+  padding: calc(var(--flex-gap) / 4);
+  background-color: var(--color-main-opacity);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(var(--flex-gap) / 4);
+}
+
+.card__title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.card__value {
+  line-height: 1;
+  font-size: 32px;
+}
+
+.card__bar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card__values {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card__bar{
+  position: relative;
+}
+
+.card__range {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  width: 100%;
+  height: 8px;
+  margin: 0;
+  padding: 0;
+  border-radius: var(--border-radius);
+
+  mask: radial-gradient(
+    circle at calc(60% + 4px),
+    transparent 6px, 
+    var(--color-main-opacity) 6px,
+    var(--color-main-opacity) 6px
+  );
+}
+
+.card__range_pressure{
+  mask: radial-gradient(
+    circle at calc(72% + 4px),
+    transparent 6px, 
+    var(--color-main-opacity) 6px,
+    var(--color-main-opacity) 6px
+  );
+}
+
+.card__range_visibility{
+  mask: radial-gradient(
+    circle at calc(21% + 4px),
+    transparent 6px, 
+    var(--color-main-opacity) 6px,
+    var(--color-main-opacity) 6px
+  );
+}
+
+.card__range:disabled{
+  background-color: var(--color-main-opacity);
+}
+
+.card__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+.card__range-ellipse{
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-main);
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 60%;
+}
+
+.card__range-ellipse_pressure{
+  left: 72%;
+}
+.card__range-ellipse_visibility{
+  left: 21%;
+}
+
+.card__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.card__details_center{
+  justify-content: center;
+}
+
+.card__details p {
+  margin: 0;
+}
