@@ -1,50 +1,4 @@
-const articlesData = [
-  {
-    title: 'Влажность',
-    iconURL: './public/images/humidity.svg',
-    value: '75 %',
-    isHaveRange: true,
-    rangeValue: 64,
-    details: ['0%', '100%'],
-  },
-  {
-    title: 'Давление',
-    iconURL: './public/images/barometr.svg',
-    value: '761',
-    isHaveRange: true,
-    rangeValue: 76,
-    details: ['Повышенное'],
-  },
-  {
-    title: 'Видимость',
-    iconURL: './public/images/visibility.svg',
-    value: '28 км',
-    isHaveRange: true,
-    rangeValue: 24,
-    details: ['Нормальная'],
-  },
-  {
-    title: 'Рассвет',
-    iconURL: './public/images/sunrise.svg',
-    value: '8:42',
-    isHaveRange: false,
-    details: ['Прошло: 02:47'],
-  },
-  {
-    title: 'Закат',
-    iconURL: './public/images/sunset.svg',
-    value: '16:37',
-    isHaveRange: false,
-    details: ['Осталось: 05:08'],
-  },
-  {
-    title: 'Сила ветра',
-    iconURL: './public/images/direction.svg',
-    value: '2 м/с',
-    isHaveRange: false,
-    details: ['Северо-западный'],
-  },
-];
+import { articlesData } from './data.js';
 
 function wrapArticleDetails(detailsArray) {
   if (!detailsArray) return;
@@ -88,16 +42,17 @@ function fillWeatherCards() {
       class="card__image"
     />
     <div class="card__value">${articlesData[index].value}</div>
-    <div class="card__bar">
-      ${articlesData[index].isHaveRange ? inputElement : cardDetailsElement}
-    </div>`;
+      ${articlesData[index].isHaveRange ? inputElement : cardDetailsElement}`;
 
     const rangeElements = document.querySelectorAll('.card__range');
     const rangeEllipsis = document.querySelectorAll('.card__range-ellipse');
 
     switch (index) {
       case 1:
-        rangeElements[index].classList.add('card__range_pressure');
+        rangeElements[index].classList.add(
+          'card__range_pressure',
+          'card__range_gradient'
+        );
         rangeEllipsis[index].classList.add('card__range-ellipse_pressure');
         break;
 

@@ -50,7 +50,7 @@ body {
   margin: 0 auto;
   padding: var(--padding);
   background-color: hsl(from var(--color-gray) h s l / 10%);
-  backdrop-filter: blur(50px);
+  backdrop-filter: blur(25px);
   border-radius: var(--border-radius);
 }
  

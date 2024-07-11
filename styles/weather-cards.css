@@ -45,7 +45,7 @@
   justify-content: space-between;
 }
 
-.card__bar{
+.card__bar {
   position: relative;
 }
 
@@ -61,31 +61,41 @@
 
   mask: radial-gradient(
     circle at calc(60% + 4px),
-    transparent 6px, 
+    transparent 6px,
     var(--color-main-opacity) 6px,
     var(--color-main-opacity) 6px
   );
 }
 
-.card__range_pressure{
+.card__range_gradient {
+  background: radial-gradient(
+    circle at center,
+    rgba(84, 84, 84, 0.4) 0%,
+    rgba(138, 138, 138, 0.4) 45%,
+    var(--color-main) 100%,
+    var(--color-main-opacity) 100%
+  );
+}
+
+.card__range_pressure {
   mask: radial-gradient(
     circle at calc(72% + 4px),
-    transparent 6px, 
+    transparent 6px,
     var(--color-main-opacity) 6px,
     var(--color-main-opacity) 6px
   );
 }
 
-.card__range_visibility{
+.card__range_visibility {
   mask: radial-gradient(
     circle at calc(21% + 4px),
-    transparent 6px, 
+    transparent 6px,
     var(--color-main-opacity) 6px,
     var(--color-main-opacity) 6px
   );
 }
 
-.card__range:disabled{
+.card__range:disabled {
   background-color: var(--color-main-opacity);
 }
 
@@ -93,7 +103,7 @@
   -webkit-appearance: none;
 }
 
-.card__range-ellipse{
+.card__range-ellipse {
   display: block;
   width: 8px;
   height: 8px;
@@ -105,10 +115,10 @@
   left: 60%;
 }
 
-.card__range-ellipse_pressure{
+.card__range-ellipse_pressure {
   left: 72%;
 }
-.card__range-ellipse_visibility{
+.card__range-ellipse_visibility {
   left: 21%;
 }
 
@@ -119,7 +129,7 @@
   font-size: 12px;
 }
 
-.card__details_center{
+.card__details_center {
   justify-content: center;
 }
 
