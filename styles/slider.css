@@ -1,0 +1,21 @@
+.slider{
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--flex-gap)/2);
+}
+
+.slider__menu{
+  display: flex;
+  flex-direction: row;
+  gap: calc(var(--flex-gap)/2);
+}
+
+.slider__forecast{
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.forecast__item{
+  font-weight: 700;
+  font-size: 16px;
+}

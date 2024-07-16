@@ -45,3 +45,48 @@ export const articlesData = [
     details: ['Северо-западный'],
   },
 ];
+
+export const slider24Hours = [
+  {
+    time: '12:00',
+    iconURL: './public/images/time=day,state=broken-clouds.svg',
+    degrees: '-7°',
+  },
+  {
+    time: '15:00',
+    iconURL: './public/images/time=day,state=broken-clouds.svg',
+    degrees: '-5°', 
+  },
+  {
+    time: '18:00',
+    iconURL: './public/images/time=day,state=broken-clouds.svg',
+    degrees: '-7°',
+  },
+  {
+    time: '21:00',
+    iconURL: './public/images/time=day,state=broken-clouds.svg',
+    degrees: '-9°',
+  },
+  {
+    time: '00:00' ,
+    iconURL: './public/images/time=day,state=broken-clouds.svg',
+    degrees: '-11°',
+  },
+];
+
+export const slider5Days=[{
+  date: 'Вс, 07 янв.',
+  iconURL: './public/images/time=day,state=few-clouds.svg',
+  degreesFrom: '-17°',
+  degreesTo: '-11°',
+},{
+  date: 'Пн, 08 янв.',
+  iconURL: './public/images/time=day,state=few-clouds.svg',
+  degreesFrom: '-16°',
+  degreesTo: '-8°',
+},{
+  date: 'Вт, 09 янв.',
+  iconURL: './public/images/time=day,state=few-clouds.svg',
+  degreesFrom: '-8°', 
+  degreesTo: '-2°',
+},]

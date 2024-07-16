@@ -32,36 +32,69 @@
       </header>
       <main>
         <div class="weather">
-          <section class="weather-info">
-            <h1 class="visually-hidden">Погода сегодня</h1>
-            <div class="weather__location">
-              <h2 class="weather__city">Москва</h2>
-              <p class="weather__date">Суббота, 06 января</p>
-              <time datetime="11:29">11:29</time>
+          <section class="weather-today">
+            <div class="left-block">
+              <h1 class="visually-hidden">Погода сегодня</h1>
+              <div class="weather__location">
+                <h2 class="weather__city">Москва</h2>
+                <p class="weather__date">Суббота, 06 января</p>
+                <time datetime="11:29">11:29</time>
+              </div>
+              <div class="weather__temp">-7°</div>
+              <div class="weather__detail">
+                <figure class="info-sky-wrapper">
+                  <img
+                    src="./public/images/time=day,state=broken-clouds.svg"
+                    alt="sky-status"
+                    width="24"
+                    height="24"
+                  />
+                  <figcaption>Облачно</figcaption>
+                </figure>
+                <p>Ощущается как -11°</p>
+              </div>
             </div>
-            <div class="weather__temp">-7°</div>
-            <div class="weather__detail">
-              <figure class="info-sky-wrapper">
-                <img
-                  src="./public/images/time=day,state=broken-clouds.svg"
-                  alt="sky-status"
-                  width="24"
-                  height="24"
-                />
-                <figcaption>Облачно</figcaption>
-              </figure>
-              <p>Ощущается как -11°</p>
+            <div class="right-block">
+              <h2 class="visually-hidden">Карточки с погодой</h2>
+              <article class="card"></article>
+              <article class="card"></article>
+              <article class="card"></article>
+              <article class="card"></article>
+              <article class="card"></article>
+              <article class="card"></article>
             </div>
           </section>
-          <section class="weather-cards">
-            <h2 class="visually-hidden">Карточки с погодой</h2>
-            <article class="card"></article>
-            <article class="card"></article>
-            <article class="card"></article>
-            <article class="card"></article>
-            <article class="card"></article>
-            <article class="card"></article>
+          <section class="slider">
+            <dl class="slider__menu">
+              <dt class="slider__forecast">Прогноз:</dt>
+              <dd class="forecast__item">на 24 часа</dd>
+              <dd class="forecast__item">на 5 дней</dd>
+            </dl>
+
+            <div class="slider__cards-wrapper">
+              <button class="slider__arrow">
+                <svg width="11" height="20" viewBox="0 0 11 20" fill="none">
+                  <use href="#arrow"></use>
+                </svg>
+              </button>
+              <ul class="slider-cards">
+                <li class="menu__card"></li>
+                <li class="menu__card"></li>
+                <li class="menu__card"></li>
+                <li class="menu__card"></li>
+                <li class="menu__card"></li>
+              </ul>
+              <button class="slider__arrow">
+                <svg width="11" height="20" viewBox="0 0 11 20" fill="none">
+                  <use href="#arrow"></use>
+                </svg>
+              </button>
+            </div>
           </section>
+          <footer class="footer">
+            Проект выполнен в рамках стажировки
+            <a href="https://preax.ru" target="_bland">PREAX</a>
+          </footer>
         </div>
       </main>
     </div>
@@ -101,6 +134,15 @@
           fill="#545454"
           stroke="#545454"
           stroke-width="0.5"
+        />
+      </symbol>
+      <symbol id="arrow">
+        <path
+          d="M10 1L1 10L10 19"
+          stroke="#545454"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
         />
       </symbol>
     </svg>
