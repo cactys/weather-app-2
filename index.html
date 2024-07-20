@@ -67,24 +67,19 @@
           <section class="slider">
             <dl class="slider__menu">
               <dt class="slider__forecast">Прогноз:</dt>
-              <dd class="forecast__item">на 24 часа</dd>
-              <dd class="forecast__item">на 5 дней</dd>
+              <dd class="forecast__item forecast__item_underline" id="24Hours">на 24 часа</dd>
+              <dd class="forecast__item" id="5Days">на 5 дней</dd>
             </dl>
 
             <div class="slider__cards-wrapper">
-              <button class="slider__arrow">
+              <button disabled class="slider__arrow" id="arrow-left">
                 <svg width="11" height="20" viewBox="0 0 11 20" fill="none">
                   <use href="#arrow"></use>
                 </svg>
               </button>
-              <ul class="slider-cards">
-                <li class="menu__card"></li>
-                <li class="menu__card"></li>
-                <li class="menu__card"></li>
-                <li class="menu__card"></li>
-                <li class="menu__card"></li>
+              <ul class="slider-cards menu">
               </ul>
-              <button class="slider__arrow">
+              <button class="slider__arrow" id="arrow-right">
                 <svg width="11" height="20" viewBox="0 0 11 20" fill="none">
                   <use href="#arrow"></use>
                 </svg>
@@ -146,7 +141,8 @@
         />
       </symbol>
     </svg>
-    <script src="src/main.js"></script>
+    <script src="src/main.js" type="module"></script>
     <script src="src/utils.js" type="module"></script>
+    <script src="src/slider.js" type="module"></script>
   </body>
 </html>

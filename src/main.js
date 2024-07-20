@@ -1,3 +1,5 @@
+import { forecastClickHandle } from "./slider.js";
+
 const searchInput = document.querySelector('input');
 const searchButton = document.querySelector('.input-button');
 const closeButton = document.querySelector('.close');
@@ -27,3 +29,5 @@ function clearInput() {
   searchButton.style.display = 'block';
   closeButton.style.display = 'none';
 }
+
+forecastClickHandle()

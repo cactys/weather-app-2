@@ -1,21 +1,124 @@
-.slider{
+.slider {
   display: flex;
   flex-direction: column;
-  gap: calc(var(--flex-gap)/2);
+  gap: calc(var(--flex-gap) / 2);
 }
 
-.slider__menu{
+/* Slider Header */
+
+.slider__menu {
   display: flex;
   flex-direction: row;
-  gap: calc(var(--flex-gap)/2);
+  align-items: baseline;
+  gap: calc(var(--flex-gap) / 2);
 }
 
-.slider__forecast{
+.slider__forecast {
   font-weight: 700;
   font-size: 24px;
 }
 
-.forecast__item{
+.forecast__item {
+  text-align: center;
+  margin: 0;
+  padding: 0;
   font-weight: 700;
   font-size: 16px;
+  position: relative;
+  color: var(--forecast-disabled);
+  transition: 0.3s ease;
+  transition-property: color;
+}
+
+.forecast__item::after{
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: -1px;
+  border-radius: 8px;
+  background-color: var(--color-main);
+  transition: width 0.3s ease;
+}
+
+.forecast__item_underline {
+  color: var(--color-main);
+}
+
+.forecast__item:not(.forecast__item_underline):hover {
+  cursor: pointer;
+  color: hsl(from var(--forecast-disabled) h s 80%);
+}
+
+.forecast__item_underline::after {
+  width: calc(100% + 2px);
+}
+
+/* Slider Items */
+
+.slider-cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: calc(var(--flex-gap) / 4);
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, #000 95%, transparent 100%);
+}
+
+.menu__card {
+  display: flex;
+
+  flex-direction: row;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: calc(var(--flex-gap) / 4);
+
+  height: 64px;
+
+  padding: calc(var(--flex-gap) / 4);
+
+  border-radius: var(--border-radius);
+  background-color: var(--color-main-opacity);
+
+  color: var(--color-black);
+  font-size: 16px;
+}
+
+/* Arrows */
+
+.slider__cards-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: calc(var(--flex-gap) / 2);
+}
+
+.slider__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 56px;
+  height: 48px;
+  padding: 0;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--color-main-opacity);
+  transition: background-color 0.2s ease;
+}
+
+.slider__arrow:last-child {
+  transform: rotate(180deg);
+  position: relative;
+  z-index: 1;
+}
+
+.slider__arrow:disabled {
+  color: var(--color-icon);
+  background-color: hsl(from var(--color-main-opacity) h s l / 20%);
+}
+
+.slider__arrow:not(:disabled):hover {
+  cursor: pointer;
+  background-color: var(--color-hover);
 }
