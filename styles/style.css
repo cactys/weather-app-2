@@ -17,6 +17,7 @@
   --flex-gap: 64px;
   --padding: 32px;
   --border-radius: 8px;
+  background-color: rgb(233, 254, 193);
 }
 
 .visually-hidden {
