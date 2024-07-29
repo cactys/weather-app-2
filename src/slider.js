@@ -55,9 +55,6 @@ function create24HoursCards() {
     sliderCardsContainer.append(cardElement);
 
     // Вставляем пустой элемент в конец слайдера
-    if (index == slider24Hours.length - 1) {
-      sliderCardsContainer.append(cardElement.cloneNode()); // копируем последний элемент без внутренностей и вставляем в конец
-    }
   });
 }
 
@@ -88,8 +85,5 @@ function create5DaysCards() {
     sliderCardsContainer.append(cardElement);
 
     
-    if (index == slider5Days.length - 1) {
-      sliderCardsContainer.append(cardElement.cloneNode());
-    }
   });
 }

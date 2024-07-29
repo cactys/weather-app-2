@@ -16,6 +16,7 @@
 .forecast__title {
   font-weight: 700;
   font-size: 24px;
+  line-height: 1.3;
 }
 
 .forecast__item {
@@ -89,7 +90,7 @@
   flex: 0 0 auto;
   gap: calc(var(--flex-gap) / 4);
 
-  height: 64px;
+  /* height: 64px; */
 
   padding: calc(var(--flex-gap) / 4);
 

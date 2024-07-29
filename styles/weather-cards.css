@@ -1,5 +1,14 @@
+.more-details {
+  max-width: 506px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3,minmax(98.33px, 1fr));
+  gap: calc(var(--flex-gap) / 4);
+
+  color: var(--color-black);
+}
+
 .card {
-  width: 158px;
   height: 196px;
   padding: calc(var(--flex-gap) / 4);
   background-color: var(--color-main-opacity);

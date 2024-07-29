@@ -1,3 +1,7 @@
+.logo-tablet{
+  display: none;
+}
+
 .header {
   display: flex;
   flex-direction: row;
@@ -10,8 +14,6 @@
   position: relative;
   max-width: 506px;
   width: 100%;
-  max-height: 48px;
-  height: 100%;
 }
 
 .input {

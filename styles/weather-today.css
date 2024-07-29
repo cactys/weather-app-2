@@ -2,30 +2,19 @@
 .weather-today {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   gap: calc(var(--flex-gap)/4);
   text-align: center;
-  width: 100%;
 }
 
-.left-block{
+.weather-info{
   display: flex;
   flex-direction: column;
   gap: var(--flex-gap);
   text-align: center;
-  width: 100%;
-}
-
-.right-block {
-  display: flex;
-  flex-wrap: wrap;
-  gap: calc(var(--flex-gap) / 4);
-  align-items: center;
-  justify-content: center;
-
-  max-width: 506px;
-  width: 100%;
-
-  color: var(--color-black);
+  flex-grow: 1;
+  min-width: 311px;
 }
 
 .weather__location {
@@ -53,7 +42,9 @@
   margin: 0;
 }
 
-.weather__detail > p {
-  margin-top: 8px;
+.weather__detail {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--flex-gap)/8);
 }
 
