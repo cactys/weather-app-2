@@ -31,3 +31,5 @@ function clearInput() {
 }
 
 forecastClickHandle()
+
+// alert('Прочитайте readme пожалуйста :)')

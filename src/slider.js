@@ -83,7 +83,5 @@ function create5DaysCards() {
     `;
 
     sliderCardsContainer.append(cardElement);
-
-    
   });
 }
