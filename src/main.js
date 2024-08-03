@@ -32,4 +32,4 @@ function clearInput() {
 
 forecastClickHandle()
 
-// alert('Прочитайте readme пожалуйста :)')
+alert('Прочитай readme пожалуйста :)')

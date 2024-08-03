@@ -67,15 +67,23 @@ body {
 }
 
 @media (max-width: 1023px) {
+  :root {
+    --padding24: calc(var(--gap-mobile) * 6);
+    --gap48: calc(var(--gap-mobile) * 12);
+    --gap24: calc(var(--gap-mobile) * 6);
+    --gap6: calc(var(--gap-mobile) * 1.5);
+    --gap12: calc(var(--gap-mobile) * 3);
+  }
+
   body,
   .container {
-    padding: calc(var(--gap-mobile) * 6);
+    padding: var(--padding24);
   }
 
   .container,
   .weather,
   .weather-today {
-    gap: calc(var(--gap-mobile) * 12);
+    gap: var(--gap48);
   }
 
   .header {
@@ -98,20 +106,22 @@ body {
   .weather-today {
     flex-direction: column;
   }
+
   .weather-info,
   .slider,
   .slider__menu,
   .slider__cards-wrapper {
-    gap: calc(var(--gap-mobile) * 6);
+    gap: var(--gap48);
   }
+
   .weather__location,
   .weather__detail {
-    gap: calc(var(--gap-mobile) * 1.5);
+    gap: var(--gap6);
   }
 
   .more-details,
   .slider-cards {
-    gap: calc(var(--gap-mobile) * 3);
+    gap: var(--gap12);
   }
 }
 
@@ -137,11 +147,9 @@ body {
     gap: calc(var(--gap-mobile) * 8);
   }
 
-  .input-button {
-    width: 16px;
-    height: 16px;
-  }
-  .input-button svg {
+  .input-button,
+  .input-button svg,
+  .info-sky-wrapper img {
     width: 16px;
     height: 16px;
   }
@@ -155,15 +163,8 @@ body {
     height: auto;
   }
 
-  .input-wrapper {
-    max-width: none;
-    width: auto;
-    flex-grow: 1;
-  }
-
   .input {
     padding: 8px 40px 8px 12px;
-    font-size: 14px;
   }
 
   .logo-desktop {
@@ -177,19 +178,21 @@ body {
   .weather__detail {
     gap: calc(var(--gap-mobile));
   }
-  .weather-info {
+
+  .weather-info,
+  .slider,
+  .slider__menu,
+  .slider__cards-wrapper {
     gap: calc(var(--gap-mobile) * 4);
   }
-  .weather__city {
+
+  .weather__city,
+  .forecast__title {
     font-size: 16px;
   }
+
   .weather__temp {
     font-size: 56px;
-  }
-
-  .info-sky-wrapper img {
-    width: 16px;
-    height: 16px;
   }
 
   .more-details {
@@ -202,16 +205,22 @@ body {
     gap: calc(var(--gap-mobile) * 3);
     padding: calc(var(--gap-mobile) * 3);
   }
-  .card__title {
+
+  .card__title,
+  .forecast__item,
+  .footer {
     font-size: 12px;
   }
+
   .card__image {
     width: 24px;
     height: 24px;
   }
+
   .card__value {
     font-size: 22px;
   }
+
   .card__bar {
     gap: calc(var(--gap-mobile) * 1.5);
   }
@@ -225,6 +234,7 @@ body {
       var(--color-main-opacity) 5px
     );
   }
+
   .card__range_pressure {
     mask: radial-gradient(
       circle at calc(72% + 2px),
@@ -233,6 +243,7 @@ body {
       var(--color-main-opacity) 5px
     );
   }
+
   .card__range_visibility {
     mask: radial-gradient(
       circle at calc(21% + 2px),
@@ -241,6 +252,7 @@ body {
       var(--color-main-opacity) 5px
     );
   }
+
   .card__range-ellipse {
     display: block;
     width: 6px;
@@ -257,27 +269,16 @@ body {
     gap: calc(var(--gap-mobile) * 2);
   }
 
-  .forecast__title {
-    font-size: 16px;
-  }
-  .forecast__item {
-    font-size: 12px;
-  }
   .forecast__item::after {
     height: 1px;
     bottom: -2px;
-  }
-
-  .slider,
-  .slider__menu,
-  .slider__cards-wrapper {
-    gap: calc(var(--gap-mobile) * 4);
   }
 
   .slider__arrow {
     min-width: 40px;
     height: 32px;
   }
+
   .slider__arrow svg {
     width: 6px;
     height: 12px;
@@ -286,17 +287,13 @@ body {
   .menu__card {
     flex-direction: row;
     gap: calc(var(--gap-mobile) * 3);
-    padding: 12px;
+    padding: calc(var(--gap-mobile) * 3);
     font-size: 12px;
   }
 
   .menu__card img {
     width: 24px;
     height: 24px;
-  }
-
-  .footer {
-    font-size: 12px;
   }
 }
 
