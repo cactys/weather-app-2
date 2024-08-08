@@ -6,6 +6,7 @@
   justify-content: center;
   gap: calc(var(--flex-gap)/4);
   text-align: center;
+  padding: 8px;;
 }
 
 .weather-info{

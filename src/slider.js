@@ -53,8 +53,6 @@ function create24HoursCards() {
     `;
 
     sliderCardsContainer.append(cardElement);
-
-    // Вставляем пустой элемент в конец слайдера
   });
 }
 

@@ -163,10 +163,14 @@ body {
     height: auto;
   }
 
-  .input {
+  /* .input {
     padding: 8px 40px 8px 12px;
-  }
+  } */
 
+  .input-wrapper{ 
+    padding: 8px 12px; 
+  }
+  
   .logo-desktop {
     display: none;
   }

@@ -1,4 +1,4 @@
-.logo-tablet{
+.logo-tablet {
   display: none;
 }
 
@@ -11,31 +11,37 @@
 }
 
 .input-wrapper {
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background-color: var(--color-main-opacity);
+  border-radius: var(--border-radius);
   max-width: 506px;
+  padding: 12px 16px;
   width: 100%;
+  transition: 0.3s ease-in-out;
 }
 
 .input {
-  background-color: var(--color-main-opacity);
+  background-color: transparent;
   color: var(--color-gray);
-  padding: 12px 50px 12px 16px;
   width: 100%;
   border-radius: var(--border-radius);
   transition: 0.3s ease-in-out;
 }
 
-.input:hover, input:active, input:focus {
+.input-wrapper_hovered,
+.input-wrapper_focused {
   background-color: var(--color-hover);
+}
+
+.input:focus {
   color: var(--color-black);
 }
 
 .input-button {
-  position: absolute;
-  content: '';
   padding: 0;
-  top: 12px;
-  right: 16px;
   width: 24px;
   height: 24px;
   border: none;
@@ -47,7 +53,11 @@
 .input-button:hover {
   cursor: pointer;
 }
-
-.close:hover, .close:focus{
+@media (hover: hover) {
+  .close:hover {
+    color: var(--color-black);
+  }
+}
+.close:focus {
   color: var(--color-black);
 }
