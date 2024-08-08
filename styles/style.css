@@ -103,15 +103,23 @@ body {
     flex-grow: 1;
   }
 
+  .card{
+    width: 163px;
+  }
+
   .weather-today {
     flex-direction: column;
+  }
+
+ .weather-info{
+    padding: 0;
   }
 
   .weather-info,
   .slider,
   .slider__menu,
   .slider__cards-wrapper {
-    gap: var(--gap48);
+    gap: var(--gap24);
   }
 
   .weather__location,
@@ -125,7 +133,20 @@ body {
   }
 }
 
+@media (max-width:886px) {
+
+  .weather-info,
+  .slider,
+  .slider__cards-wrapper,
+  .slider__menu {
+    gap: var(--gap24);
+  }
+
+}
+
 @media (max-width: 768px) {
+  
+
   .menu__card {
     flex-direction: column;
   }
@@ -163,14 +184,10 @@ body {
     height: auto;
   }
 
-  /* .input {
-    padding: 8px 40px 8px 12px;
-  } */
-
-  .input-wrapper{ 
-    padding: 8px 12px; 
+  .input-wrapper {
+    padding: 8px 12px;
   }
-  
+
   .logo-desktop {
     display: none;
   }

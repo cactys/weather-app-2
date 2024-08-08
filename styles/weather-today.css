@@ -6,7 +6,6 @@
   justify-content: center;
   gap: calc(var(--flex-gap)/4);
   text-align: center;
-  padding: 8px;;
 }
 
 .weather-info{
@@ -15,7 +14,7 @@
   gap: var(--flex-gap);
   text-align: center;
   flex-grow: 1;
-  min-width: 311px;
+  padding: 8px;
 }
 
 .weather__location {
@@ -26,6 +25,7 @@
 }
 
 .weather__city {
+  line-height: 1.33;
   font-size: 24px;
 }
 

@@ -1,6 +1,6 @@
 import { slider24Hours, slider5Days } from './data.js';
 
-export function forecastClickHandle() {
+function forecastClickHandle() {
   document.addEventListener('DOMContentLoaded', () => {
     // Заполняем карточки при загрузке страницы, в зависимости от сохраненной вкладки слайдера (может в дальнейшем интеграция с LS будет :) )
     const activeSliderTab = document.querySelector('.forecast__item_underline');
@@ -83,3 +83,4 @@ function create5DaysCards() {
     sliderCardsContainer.append(cardElement);
   });
 }
+forecastClickHandle();
