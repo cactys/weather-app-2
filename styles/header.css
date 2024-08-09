@@ -18,13 +18,12 @@
   background-color: var(--color-main-opacity);
   border-radius: var(--border-radius);
   max-width: 506px;
-  padding: 12px 16px;
+  padding: 11px 16px 11px 14px;
   width: 100%;
   transition: 0.3s ease-in-out;
 }
 
 .input {
-  padding: 0;
   background-color: transparent;
   color: var(--color-gray);
   width: 100%;
@@ -63,3 +62,57 @@
   color: var(--color-black);
 }
 
+@media (max-width: 1023px) {
+  .header {
+    gap: 135px;
+  }
+
+  .logo-desktop {
+    display: none;
+  }
+  .logo-tablet {
+    display: block;
+  }
+
+  .input-wrapper {
+    max-width: none;
+    width: auto;
+    flex-grow: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .input {
+    line-height: 1.14;
+  }
+
+  .input-button,
+  .input-button svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .header {
+    gap: 135px;
+  }
+
+  .logo-tablet {
+    width: 32px;
+    height: auto;
+    display: block;
+  }
+
+  .logo-desktop {
+    display: none;
+  }
+
+  .input-wrapper {
+    padding: 7px 12px 7px 10px;
+  }
+}
+
+@media (max-width: 440px) {
+  .header {
+    gap: calc(var(--gap-mobile) * 4);
+  }
+}

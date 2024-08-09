@@ -18,6 +18,13 @@
   --gap-mobile: 4px;
   --padding: 32px;
   --border-radius: 8px;
+
+  /* Для медиа-запросов */
+  --padding24: calc(var(--gap-mobile) * 6);
+  --gap48: calc(var(--gap-mobile) * 12);
+  --gap24: calc(var(--gap-mobile) * 6);
+  --gap6: calc(var(--gap-mobile) * 1.5);
+  --gap12: calc(var(--gap-mobile) * 3);
 }
 
 .visually-hidden {
@@ -59,96 +66,14 @@ body {
   border-radius: var(--border-radius);
 }
 
-.weather {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: calc(var(--flex-gap));
-}
-
 @media (max-width: 1023px) {
-  :root {
-    --padding24: calc(var(--gap-mobile) * 6);
-    --gap48: calc(var(--gap-mobile) * 12);
-    --gap24: calc(var(--gap-mobile) * 6);
-    --gap6: calc(var(--gap-mobile) * 1.5);
-    --gap12: calc(var(--gap-mobile) * 3);
-  }
-
   body,
   .container {
     padding: var(--padding24);
   }
 
-  .container,
-  .weather,
-  .weather-today {
+  .container {
     gap: var(--gap48);
-  }
-
-  .header {
-    gap: 135px;
-  }
-
-  .logo-desktop {
-    display: none;
-  }
-  .logo-tablet {
-    display: block;
-  }
-
-  .input-wrapper {
-    max-width: none;
-    width: auto;
-    flex-grow: 1;
-  }
-
-  .card{
-    width: 163px;
-  }
-
-  .weather-today {
-    flex-direction: column;
-  }
-
- .weather-info{
-    padding: 0;
-  }
-
-  .weather-info,
-  .slider,
-  .slider__menu,
-  .slider__cards-wrapper {
-    gap: var(--gap24);
-  }
-
-  .weather__location,
-  .weather__detail {
-    gap: var(--gap6);
-  }
-
-  .more-details,
-  .slider-cards {
-    gap: var(--gap12);
-  }
-}
-
-@media (max-width:886px) {
-
-  .weather-info,
-  .slider,
-  .slider__cards-wrapper,
-  .slider__menu {
-    gap: var(--gap24);
-  }
-
-}
-
-@media (max-width: 768px) {
-  
-
-  .menu__card {
-    flex-direction: column;
   }
 }
 
@@ -162,170 +87,7 @@ body {
     padding: calc(var(--gap-mobile) * 4);
   }
 
-  .container,
-  .weather,
-  .weather-today {
+  .container {
     gap: calc(var(--gap-mobile) * 8);
-  }
-
-  .input-button,
-  .input-button svg,
-  .info-sky-wrapper img {
-    width: 16px;
-    height: 16px;
-  }
-
-  .header {
-    gap: 135px;
-  }
-
-  .logo-tablet {
-    width: 32px;
-    height: auto;
-  }
-
-  .input-wrapper {
-    padding: 8px 12px;
-  }
-
-  .logo-desktop {
-    display: none;
-  }
-  .logo-tablet {
-    display: block;
-  }
-
-  .weather__location,
-  .weather__detail {
-    gap: calc(var(--gap-mobile));
-  }
-
-  .weather-info,
-  .slider,
-  .slider__menu,
-  .slider__cards-wrapper {
-    gap: calc(var(--gap-mobile) * 4);
-  }
-
-  .weather__city,
-  .forecast__title {
-    font-size: 16px;
-  }
-
-  .weather__temp {
-    font-size: 56px;
-  }
-
-  .more-details {
-    grid-template-columns: repeat(3, minmax(98.33px, 128px));
-  }
-
-  .card {
-    width: 100%;
-    height: 148px;
-    gap: calc(var(--gap-mobile) * 3);
-    padding: calc(var(--gap-mobile) * 3);
-  }
-
-  .card__title,
-  .forecast__item,
-  .footer {
-    font-size: 12px;
-  }
-
-  .card__image {
-    width: 24px;
-    height: 24px;
-  }
-
-  .card__value {
-    font-size: 22px;
-  }
-
-  .card__bar {
-    gap: calc(var(--gap-mobile) * 1.5);
-  }
-
-  .card__range {
-    height: 6px;
-    mask: radial-gradient(
-      circle at calc(60% + 3px),
-      transparent 5px,
-      var(--color-main-opacity) 5px,
-      var(--color-main-opacity) 5px
-    );
-  }
-
-  .card__range_pressure {
-    mask: radial-gradient(
-      circle at calc(72% + 2px),
-      transparent 5px,
-      var(--color-main-opacity) 5px,
-      var(--color-main-opacity) 5px
-    );
-  }
-
-  .card__range_visibility {
-    mask: radial-gradient(
-      circle at calc(21% + 2px),
-      transparent 5px,
-      var(--color-main-opacity) 5px,
-      var(--color-main-opacity) 5px
-    );
-  }
-
-  .card__range-ellipse {
-    display: block;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-  }
-
-  .card__details {
-    font-size: 10px;
-  }
-
-  .more-details,
-  .slider-cards {
-    gap: calc(var(--gap-mobile) * 2);
-  }
-
-  .forecast__item::after {
-    height: 1px;
-    bottom: -2px;
-  }
-
-  .slider__arrow {
-    min-width: 40px;
-    height: 32px;
-  }
-
-  .slider__arrow svg {
-    width: 6px;
-    height: 12px;
-  }
-
-  .menu__card {
-    flex-direction: row;
-    gap: calc(var(--gap-mobile) * 3);
-    padding: calc(var(--gap-mobile) * 3);
-    font-size: 12px;
-  }
-
-  .menu__card img {
-    width: 24px;
-    height: 24px;
-  }
-}
-
-@media (max-width: 440px) {
-  .header {
-    gap: calc(var(--gap-mobile) * 4);
-  }
-}
-
-@media (max-width: 375px) {
-  .menu__card {
-    flex-direction: column;
   }
 }

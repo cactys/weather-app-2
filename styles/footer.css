@@ -1,8 +1,14 @@
-.footer{
+.footer {
   text-align: center;
   font-size: 16px;
 }
 
-.footer a{
+.footer a {
   border-bottom: 1px solid var(--color-main);
+}
+
+@media (max-width: 640px) {
+  .footer {
+    font-size: 12px;
+  }
 }
