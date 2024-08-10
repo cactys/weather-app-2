@@ -53,6 +53,7 @@
 .input-button:hover {
   cursor: pointer;
 }
+
 @media (hover: hover) {
   .close:hover {
     color: var(--color-black);
