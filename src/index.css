@@ -1,0 +1,61 @@
+@import url('./vendor/normalize.css');
+@import url('./vendor/fonts.css');
+
+:root {
+  --color-main: #f5f4f4;
+  --color-gray: #707070;
+  --color-black: #202020;
+  --color-hover: #dadada;
+  --color-icon: #545454;
+  --forecast-disabled: #a6a6a6;
+  --color-main-opacity: hsl(from var(--color-main) h s l / 40%);
+  --flex-gap: 64px;
+  --gap-mobile: 4px;
+  --padding: 32px;
+  --border-radius: 8px;
+
+  /* Для медиа-запросов */
+  --padding24: calc(var(--gap-mobile) * 6);
+  --gap48: calc(var(--gap-mobile) * 12);
+  --gap24: calc(var(--gap-mobile) * 6);
+  --gap6: calc(var(--gap-mobile) * 1.5);
+  --gap12: calc(var(--gap-mobile) * 3);
+}
+
+body {
+  margin: 0 auto;
+  padding: var(--padding);
+  color: var(--color-main);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  background: url(./images/background.webp) no-repeat center/cover fixed;
+  font-variant-numeric: lining-nums;
+}
+
+@media (max-width: 1023px) {
+  body,
+  .container {
+    padding: var(--padding24);
+  }
+
+  .container {
+    gap: var(--gap48);
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+
+  body,
+  .container {
+    padding: calc(var(--gap-mobile) * 4);
+  }
+
+  .container {
+    gap: calc(var(--gap-mobile) * 8);
+  }
+}

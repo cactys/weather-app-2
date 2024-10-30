@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--flex-gap);
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  background-color: hsl(from var(--color-gray) h s l / 10%);
+  backdrop-filter: blur(25px);
+}
+
+.container__title {
+  display: none;
+}
