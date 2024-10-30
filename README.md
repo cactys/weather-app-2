@@ -1,3 +1,2 @@
 # WeatherApp
-Никита
-nikosvolkov
+Task 1: Владимир, katleta
