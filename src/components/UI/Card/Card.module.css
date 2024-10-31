@@ -1,0 +1,21 @@
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: calc(var(--flex-gap) / 4);
+  text-align: center;
+}
+
+@media (max-width: 1023px) {
+  .card {
+    flex-direction: column;
+    gap: var(--gap48);
+  }
+}
+
+@media (max-width: 640px) {
+  .card {
+    gap: calc(var(--gap-mobile) * 8);
+  }
+}

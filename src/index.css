@@ -9,6 +9,8 @@
   --color-icon: #545454;
   --forecast-disabled: #a6a6a6;
   --color-main-opacity: hsl(from var(--color-main) h s l / 40%);
+  --color-main-container: hsl(from var(--color-gray) h s l / 10%);
+  --blur: blur(25px);
   --flex-gap: 64px;
   --gap-mobile: 4px;
   --padding: 32px;
@@ -35,6 +37,7 @@ body {
 }
 
 @media (max-width: 1023px) {
+
   body,
   .container {
     padding: var(--padding24);

@@ -12,8 +12,8 @@ a:link,
 a:active,
 a:visited,
 a:hover {
-  text-decoration: none;
   color: currentColor;
+  text-decoration: none;
 }
 
 /**
@@ -47,8 +47,8 @@ body,
 
 :where(fieldset[class]) {
   margin-left: 0;
-  padding: 0;
   border: none;
+  padding: 0;
 }
 
 /**
@@ -98,14 +98,16 @@ textarea,
 select,
 button {
   font: inherit;
+  padding: 0;
+  margin: 0;
 }
 
 input,
 input:hover,
 input:active,
 input:focus {
-  outline: none;
   border: none;
+  outline: none;
 }
 
 html {
@@ -142,6 +144,7 @@ body {
 svg *[fill] {
   fill: currentColor;
 }
+
 svg *[stroke] {
   stroke: currentColor;
 }
@@ -159,9 +162,9 @@ svg * {
   */
 @media (prefers-reduced-motion: reduce) {
   * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
   }
 }

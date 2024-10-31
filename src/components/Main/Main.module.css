@@ -1,0 +1,18 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: calc(var(--flex-gap));
+}
+
+@media (max-width: 1023px) {
+  .main {
+    gap: var(--gap48);
+  }
+}
+
+@media (max-width: 640px) {
+  .main {
+    gap: calc(var(--gap-mobile) * 8);
+  }
+}
