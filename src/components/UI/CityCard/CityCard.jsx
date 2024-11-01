@@ -3,34 +3,32 @@ import styles from './CityCard.module.css';
 
 const CityCard = () => {
   return (
-    <div className={styles['city-card']}>
-      <h2 className={styles['city-card__title']}>Погода сегодня</h2>
-      <div className={styles['city-card__location']}>
-        <h3 className={styles['city-card__city']}>
+    <article className={styles['city-card']}>
+      <header className={styles['city-card__header']}>
+        <h2 className={styles['city-card__title']}>
           Кременчуг-константиновское
-        </h3>
-        <time className={styles['city-card__date']} datetime="2024-01-06">
+        </h2>
+        <time className={styles['city-card__date']} dateTime="2024-01-06">
           Суббота, 06 января
         </time>
-        <time className={styles['city-card__date']} datetime="11:29">
+        <time className={styles['city-card__date']} dateTime="11:29">
           11:29
         </time>
-      </div>
+      </header>
       <p className={styles['city-card__temp']}>-7&#176;</p>
-      <div className={styles['city-card__detail']}>
+      <div className={styles['city-card__body']}>
         <figure className={styles['city-card__figure']}>
-          <SvgSprite />
-          <img
-            src="./public/images/weather-state/time=day,state=broken-clouds.svg"
-            alt="sky-status"
-            width="24"
-            height="24"
+          <SvgSprite
+            id="day-broken-clouds-svg"
+            className={styles['city-card__icon']}
           />
-          <figcaption>Облачно с прояснениями</figcaption>
+          <figcaption className={styles['city-card__figcaption']}>
+            Облачно с прояснениями
+          </figcaption>
         </figure>
-        <p>Ощущается как -11°</p>
+        <p className={styles['city-card__copy']}>Ощущается как -11°</p>
       </div>
-    </div>
+    </article>
   );
 };
 

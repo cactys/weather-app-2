@@ -22,6 +22,28 @@
   --gap24: calc(var(--gap-mobile) * 6);
   --gap6: calc(var(--gap-mobile) * 1.5);
   --gap12: calc(var(--gap-mobile) * 3);
+
+  /* typography */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-size-xs: 10px;
+  --font-size-s: 12px;
+  --font-size-sm: 14px;
+  --font-size-m: 16px;
+  --font-size-base: 20px;
+  --font-size-alt: 22px;
+  --font-size-lg: 24px;
+  --font-size-xl: 56px;
+  --font-size-xxl: 112px;
+  --line-height-xs: 12px;
+  --line-height-s: 16px;
+  --line-height-sm: 16px;
+  --line-height-m: 20px;
+  --line-height-base: 24px;
+  --line-height-alt: 22px;
+  --line-height-lg: 32px;
+  --line-height-xl: 56px;
+  --line-height-xxl: 112px;
 }
 
 body {
@@ -29,9 +51,9 @@ body {
   padding: var(--padding);
   color: var(--color-main);
   font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.2;
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
   background: url(./images/background.webp) no-repeat center/cover fixed;
   font-variant-numeric: lining-nums;
 }
@@ -50,7 +72,8 @@ body {
 
 @media (max-width: 640px) {
   body {
-    font-size: 14px;
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-sm);
   }
 
   body,

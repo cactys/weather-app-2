@@ -1,13 +1,31 @@
-import CardList from '../CardList/CardList';
-import CityCard from '../CityCard/CityCard';
+import SvgSprite from '../SvgSprite/SvgSprite';
 import styles from './Card.module.css';
 
-const Card = () => {
+const Card = ({ title, iconId, value, isHaveRange, rangeValue, details }) => {
   return (
-    <section className={styles.card}>
-      <CityCard />
-      <CardList />
-    </section>
+    <article className={styles.card}>
+      <header className={styles.card__header}>
+        <h2 className={styles.card__title}>{title}</h2>
+        <figure className={styles.card__figure}>
+          <SvgSprite id={iconId} className={styles.card__icon} />
+        </figure>
+        <h3 className={styles.card__subtitle}>{value}</h3>
+      </header>
+      <div className={styles.card__body}>
+        {isHaveRange && (
+          <div className={styles.card__bar}>
+            <span className={styles.card__ellipse} />
+          </div>
+        )}
+        <div className={styles['card__value-container']}>
+          {details.map((item, index) => (
+            <p key={index} className={styles.card__value}>
+              {item}
+            </p>
+          ))}
+        </div>
+      </div>
+    </article>
   );
 };
 

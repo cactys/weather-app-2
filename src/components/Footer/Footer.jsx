@@ -2,7 +2,7 @@ import styles from './Footer.module.css';
 
 const Footer = () => {
   return (
-    <footer class={styles.footer}>
+    <footer className={styles.footer}>
       Проект выполнен в рамках стажировки{' '}
       <a
         className={styles.footer__link}
