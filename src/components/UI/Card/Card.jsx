@@ -1,3 +1,4 @@
+import BarValue from '../BarValue/BarValue';
 import SvgSprite from '../SvgSprite/SvgSprite';
 import styles from './Card.module.css';
 
@@ -12,12 +13,12 @@ const Card = ({ title, iconId, value, isHaveRange, rangeValue, details }) => {
         <h3 className={styles.card__subtitle}>{value}</h3>
       </header>
       <div className={styles.card__body}>
-        {isHaveRange && (
-          <div className={styles.card__bar}>
-            <span className={styles.card__ellipse} />
-          </div>
-        )}
-        <div className={styles['card__value-container']}>
+        {isHaveRange && <BarValue title={title} rangeValue={rangeValue} />}
+        <div
+          className={`${styles['card__value-container']} ${
+            details.length >= 2 ? styles['card__double-value'] : ''
+          }`}
+        >
           {details.map((item, index) => (
             <p key={index} className={styles.card__value}>
               {item}

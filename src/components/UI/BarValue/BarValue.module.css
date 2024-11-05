@@ -1,0 +1,51 @@
+.bar {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(218, 218, 218, 0.4);
+
+  mask: radial-gradient(circle 20px at var(--ellipse-position),
+      #000 4px,
+      transparent 4px,
+      transparent 6px,
+      #000 0);
+}
+
+.bar_pressure {
+  background: radial-gradient(circle,
+      rgba(84, 84, 84, 0.4),
+      rgba(138, 138, 138, 0.4) 45.123%,
+      rgb(218, 218, 218) 100%,
+      rgba(218, 218, 218, 0.4) 100%);
+}
+
+.bar__ellipse {
+  position: absolute;
+  left: calc(var(--ellipse-position) - 4px);
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: rgba(245, 244, 244, 1);
+}
+
+@media screen and (max-width: 640px) {
+  .bar {
+    height: 6px;
+
+    mask: radial-gradient(circle 20px at var(--ellipse-position),
+        #000 3px,
+        transparent 3px,
+        transparent 5px,
+        #000 0);
+  }
+
+  .bar__ellipse {
+    left: calc(var(--ellipse-position) - 3px);
+    width: 6px;
+    height: 6px;
+  }
+}

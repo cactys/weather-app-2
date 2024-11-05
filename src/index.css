@@ -2,8 +2,13 @@
 @import url('./vendor/fonts.css');
 
 :root {
+  /* ellipse position */
+  --ellipse-position: 0%;
+
+  /* colors */
   --color-main: #f5f4f4;
   --color-gray: #707070;
+  --color-dark-gray: #393939;
   --color-black: #202020;
   --color-hover: #dadada;
   --color-icon: #545454;
@@ -20,8 +25,10 @@
   --padding24: calc(var(--gap-mobile) * 6);
   --gap48: calc(var(--gap-mobile) * 12);
   --gap24: calc(var(--gap-mobile) * 6);
-  --gap6: calc(var(--gap-mobile) * 1.5);
+  --gap16: calc(var(--gap-mobile) * 4);
   --gap12: calc(var(--gap-mobile) * 3);
+  --gap8: calc(var(--gap-mobile) * 2);
+  --gap6: calc(var(--gap-mobile) * 1.5);
 
   /* typography */
   --font-weight-regular: 400;
@@ -32,7 +39,7 @@
   --font-size-m: 16px;
   --font-size-base: 20px;
   --font-size-alt: 22px;
-  --font-size-lg: 24px;
+  --font-size-lg: 32px;
   --font-size-xl: 56px;
   --font-size-xxl: 112px;
   --line-height-xs: 12px;
@@ -47,14 +54,24 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   margin: 0 auto;
   padding: var(--padding);
   color: var(--color-main);
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', 'Arial', sans-serif;
   font-weight: var(--font-weight-regular);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
-  background: url(./images/background.webp) no-repeat center/cover fixed;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  background: url(./images/background.webp) no-repeat center / cover fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-variant-numeric: lining-nums;
 }
 
