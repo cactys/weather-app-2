@@ -1,13 +1,11 @@
 import { useState } from 'react';
-import Footer from '../Footer/Footer';
-import Main from '../Main/Main';
 import Header from '../Header/Header';
+import Main from '../Main/Main';
+import Footer from '../Footer/Footer';
 import CityCard from '../UI/CityCard/CityCard';
 import CardList from '../UI/CardList/CardList';
 import DataContext from '../../contexts/DataContext';
-
 import { articlesData, slider24Hours, slider5Days } from '../../mock/mockData';
-
 import styles from './App.module.css';
 
 function App() {

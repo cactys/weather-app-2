@@ -1,12 +1,10 @@
 import { useContext } from 'react';
 import Card from '../Card/Card';
-import styles from './CardList.module.css';
 import DataContext from '../../../contexts/DataContext';
+import styles from './CardList.module.css';
 
 const CardList = () => {
   const { articles } = useContext(DataContext);
-
-  console.log(articles);
 
   return (
     <ul className={styles['card-list']}>

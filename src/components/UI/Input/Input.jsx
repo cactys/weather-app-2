@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
+import { useForm } from '../../../hooks/useForm';
 import Button from '../Button/Button';
 import SvgSprite from '../SvgSprite/SvgSprite';
 import styles from './Input.module.css';
-import { useForm } from '../../../hooks/useForm';
 
 const Input = () => {
   const [focused, setFocused] = useState(false);

@@ -1,9 +1,9 @@
 .card-list {
-  max-width: fit-content;
-  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: calc(var(--flex-gap) / 4);
+  width: 100%;
+  max-width: fit-content;
   color: var(--color-black);
 }
 

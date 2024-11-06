@@ -72,6 +72,12 @@
   margin: 0;
 }
 
+@media (max-width: 1023px) {
+  .card {
+    width: 163px;
+  }
+}
+
 @media screen and (max-width: 640px) {
   .card {
     gap: calc(var(--gap-mobile) * 3);
@@ -96,11 +102,5 @@
   .card__value-container {
     font-size: var(--font-size-xs);
     line-height: var(--line-height-xs);
-  }
-}
-
-@media (max-width: 1023px) {
-  .card {
-    width: 163px;
   }
 }
