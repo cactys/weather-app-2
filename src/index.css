@@ -1,6 +1,10 @@
 @import url('./vendor/normalize.css');
 @import url('./vendor/fonts.css');
 
+#root {
+  width: 100%;
+}
+
 :root {
   /* ellipse position */
   --ellipse-position: 0%;
@@ -23,6 +27,7 @@
 
   /* Для медиа-запросов */
   --padding24: calc(var(--gap-mobile) * 6);
+  --padding8: calc(var(--gap-mobile) * 2);
   --gap48: calc(var(--gap-mobile) * 12);
   --gap24: calc(var(--gap-mobile) * 6);
   --gap16: calc(var(--gap-mobile) * 4);
@@ -40,6 +45,7 @@
   --font-size-base: 20px;
   --font-size-alt: 22px;
   --font-size-lg: 24px;
+  --font-size-lg-alt: 32px;
   --font-size-xl: 56px;
   --font-size-xxl: 112px;
   --line-height-xs: 12px;

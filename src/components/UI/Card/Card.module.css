@@ -28,6 +28,7 @@
 
 .card__figure {
   margin: 0;
+  display: flex;
 }
 
 .card__icon {
@@ -39,7 +40,7 @@
   margin: 0;
   color: var(--color-black);
   font-weight: var(--font-weight-regular);
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-lg-alt);
   line-height: var(--line-height-lg);
   text-align: center;
 }

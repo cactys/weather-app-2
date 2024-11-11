@@ -1,9 +1,9 @@
 .city-card {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   gap: var(--flex-gap);
-  padding: 8px;
+  width: 100%;
+  padding: var(--padding8);
   text-align: center;
 }
 
@@ -12,9 +12,11 @@
   flex-direction: column;
   align-items: center;
   gap: calc(var(--flex-gap) / 8);
+  width: 100%;
 }
 
 .city-card__title {
+  font-weight: var(--font-weight-bold);
   font-size: var(--font-size-lg);
   line-height: var(--line-height-lg);
 }
@@ -29,6 +31,7 @@
   display: flex;
   flex-direction: column;
   gap: calc(var(--flex-gap) / 8);
+  width: 100%;
 }
 
 .city-card__figure {
@@ -36,6 +39,7 @@
   justify-content: center;
   align-items: center;
   gap: calc(var(--flex-gap) / 8);
+  width: 100%;
   margin: 0;
 }
 

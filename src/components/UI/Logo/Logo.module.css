@@ -1,3 +1,7 @@
+.logo {
+  display: flex;
+}
+
 .logo__desktop {
   width: 192px;
   height: 48px;
