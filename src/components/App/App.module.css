@@ -21,7 +21,13 @@
   }
 }
 
-@media (max-width: 640px) {
+@media screen and (max-width: 886px) {
+  .container {
+    padding: var(--padding24);
+  }
+}
+
+@media screen and (max-width: 640px) {
   .container {
     gap: calc(var(--gap-mobile) * 8);
     padding: calc(var(--gap-mobile) * 4);

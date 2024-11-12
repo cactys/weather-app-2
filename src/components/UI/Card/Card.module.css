@@ -96,8 +96,18 @@
     line-height: var(--line-height-s);
   }
 
+  .card__icon {
+    width: 24px;
+    height: 24px;
+  }
+
   .card__subtitle {
     font-size: var(--font-size-alt);
+    line-height: var(--line-height-alt);
+  }
+
+  .card__body {
+    row-gap: var(--gap6);
   }
 
   .card__value-container {
